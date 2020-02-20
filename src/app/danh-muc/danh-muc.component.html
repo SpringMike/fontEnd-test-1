@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div id="custom-search-input">
+      <form [formGroup]="formGroup">
+      <div class="input-group col-md-12" style="text-align: center">
+        <input type="text" class="search-query form-control" placeholder="Search With name Address" formControlName="categoryId"  />
+        <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="search()">
+                                            Search
+                                        </button>
+                                    </span>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row col-md-12 text-center col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>fisrName</th>
+        <th>LastName</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let i of categories">
+        <td>{{i.id}}</td>
+        <td>{{i.firstName}}</td>
+        <td>{{i.lastName}}</td>
+        <td><button class="btn btn-danger btn-xs" (click)="delete(i.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td>
+        <td><button class="btn btn-primary btn-xs" routerLink='/edit/{{i.id}}' (click)="update(i.id)" ><span class="glyphicon glyphicon-remove"></span> Edit</button></td>
+
+
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="formGroup" (ngSubmit)="save()">
+        <fieldset>
+
+          <div class="form-group">
+            <label ><span class="req">* </span> FirstName: </label>
+            <input class="form-control" type="text" placeholder="firstName" name="tenDanhMuc" formControlName="categoryfirstName" />
+          </div>
+
+          <div class="form-group">
+            <label ><span class="req">* </span> LastName: </label>
+            <input class="form-control"  type="text" placeholder="LastName" name="tenDanhMuc" formControlName="categorylastName" />
+          </div>
+
+          <div class="form-group">
+            <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+          </div>
+        </fieldset>
+      </form>
+
+    </div>
+
+  </div>
